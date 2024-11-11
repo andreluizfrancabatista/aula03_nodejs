@@ -2,6 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./routes/routes')
 
+const cors = require('cors')
+app.use(cors())
+
 require('dotenv').config()
 
 const mongoString = process.env.DATABASE_URL
