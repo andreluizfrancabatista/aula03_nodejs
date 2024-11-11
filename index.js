@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const routes = require('./routes/routes')
 
 const cors = require('cors')
-app.use(cors())
 
 require('dotenv').config()
 
@@ -33,7 +32,7 @@ database.once('connected', () => {
 
 const port = 3000
 const app = express()
-
+app.use(cors())
 // app.get('/', (req, res) => {
 //     res.send('Hello world')
 // })
